@@ -1,1 +1,1 @@
-CM based MM 6.0.1 ROMs. replace repo files with these.
+Fix Media display crash. replace repo files with these.
