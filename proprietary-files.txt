@@ -1,7 +1,4 @@
-
 # Audio
-etc/audio_policy.conf
-etc/init.qcom.audio.sh
 etc/mixer_paths.xml
 etc/snd_soc_msm/snd_soc_msm_Tapan
 etc/snd_soc_msm/snd_soc_msm_TapanLite
@@ -57,14 +54,14 @@ vendor/lib/libOmxEvrcDec.so
 vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
 vendor/lib/libSHIMDivxDrm.so
-bin/qseecomd
-#lib/libdrmfs.so
-#lib/libdrmtime.so
-#lib/libQSEEComAPI.so
 
 #DRM
-#lib/libdrmfs.so
-#lib/libdrmtime.so
+bin/qseecomd
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
+vendor/lib/libQSEEComAPI.so
+vendor/lib/librpmb.so
+vendor/lib/libssd.so
 #lib/drm/libfwdlockengine.so
 
 # Camera
@@ -82,6 +79,44 @@ lib/libmorpho_photoscouter.so
 lib/libmorpho_whiteboard.so
 lib/liboemcamera.so
 lib/libqomx_core.so
+vendor/lib/lib-imscamera.so
+vendor/lib/libjpegdhw.so
+vendor/lib/libjpegehw.so
+vendor/lib/libmmcamera2_c2d_module.so
+vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_iface_modules.so
+vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_isp_modules.so
+vendor/lib/libmmcamera2_pproc_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_stats_algorithm.so
+vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_vpe_module.so
+vendor/lib/libmmcamera2_wnr_module.so
+vendor/lib/libmmcamera_ar0542.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_hdr_gb_lib.so
+vendor/lib/libmmcamera_hdr_lib.so
+vendor/lib/libmmcamera_hdr_morpho_lib.so
+vendor/lib/libmmcamera_imglib.so
+vendor/lib/libmmcamera_imx135.so
+vendor/lib/libmmcamera_ov5648_oty5f03.so
+vendor/lib/libmmcamera_ov8825.so
+vendor/lib/libmmcamera_ov8835.so
+vendor/lib/libmmcamera_ov9760.so
+vendor/lib/libmmcamera_photosolid_morpho_lib.so
+vendor/lib/libmmcamera_qtech_ar0542_eeprom.so
+vendor/lib/libmmcamera_tintless_algo.so
+vendor/lib/libmmcamera_tintless_bg_pca_algo.so
+vendor/lib/libmmcamera_tuning.so
+vendor/lib/libmmcamera_wavelet_lib.so
+vendor/lib/libmmipl.so
+vendor/lib/libmmjpeg.so
+vendor/lib/libmmqjpeg_codec.so
+vendor/lib/libqomx_jpegdec.so
+vendor/lib/libqomx_jpegenc.so
+
+#Chromatix
 vendor/lib/libchromatix_ar0542_common.so
 vendor/lib/libchromatix_ar0542_default_video.so
 vendor/lib/libchromatix_ar0542_liveshot.so
@@ -138,133 +173,56 @@ vendor/lib/libchromatix_qtech_ar0542_default_video.so
 vendor/lib/libchromatix_qtech_ar0542_liveshot.so
 vendor/lib/libchromatix_qtech_ar0542_preview.so
 vendor/lib/libchromatix_qtech_ar0542_snapshot.so
-vendor/lib/lib-imscamera.so
-vendor/lib/libjpegdhw.so
-vendor/lib/libjpegehw.so
-vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_pproc_modules.so
-vendor/lib/libmmcamera2_sensor_modules.so
-vendor/lib/libmmcamera2_stats_algorithm.so
-vendor/lib/libmmcamera2_stats_modules.so
-vendor/lib/libmmcamera2_vpe_module.so
-vendor/lib/libmmcamera2_wnr_module.so
-vendor/lib/libmmcamera_ar0542.so
-vendor/lib/libmmcamera_faceproc.so
-vendor/lib/libmmcamera_hdr_gb_lib.so
-vendor/lib/libmmcamera_hdr_lib.so
-vendor/lib/libmmcamera_hdr_morpho_lib.so
-vendor/lib/libmmcamera_imglib.so
-vendor/lib/libmmcamera_imx135.so
-vendor/lib/libmmcamera_ov5648_oty5f03.so
-vendor/lib/libmmcamera_ov8825.so
-vendor/lib/libmmcamera_ov8835.so
-vendor/lib/libmmcamera_ov9760.so
-vendor/lib/libmmcamera_photosolid_morpho_lib.so
-vendor/lib/libmmcamera_qtech_ar0542_eeprom.so
-vendor/lib/libmmcamera_tintless_algo.so
-vendor/lib/libmmcamera_tintless_bg_pca_algo.so
-vendor/lib/libmmcamera_tuning.so
-vendor/lib/libmmcamera_wavelet_lib.so
-vendor/lib/libmmipl.so
-vendor/lib/libmmjpeg.so
-vendor/lib/libmmqjpeg_codec.so
-vendor/lib/libqomx_jpegdec.so
-vendor/lib/libqomx_jpegenc.so
 
-# scripts
-etc/enable_swap.sh
-etc/hcidump.sh
-etc/hsic.control.bt.sh
-etc/init.crda.sh
-etc/init.qcom.wifi.sh
-etc/init.ath3k.bt.sh
-etc/init.qcom.audio.sh
-etc/init.qcom.bt.sh
-#etc/init.qcom.btdun.sh
-etc/init.qcom.coex.sh
-etc/init.qcom.efs.sync.sh
-etc/init.qcom.fm.sh
-#etc/init.qcom.mdm_links.sh
-etc/init.qcom.post_boot.sh
-etc/init.qcom.sdio.sh
-etc/init.qcom.wifi.sh
-etc/init.wlanprop.sh
-#etc/usf_post_boot.sh
-etc/qca6234-service.sh
+# Camera firmware
+etc/firmware/cpp_firmware_v1_1_1.fw
+etc/firmware/cpp_firmware_v1_1_6.fw
+etc/firmware/cpp_firmware_v1_2_0.fw
 
-# RIL/RADIO
-lib/libdsi_netctrl.so
-lib/libdsutils.so
-lib/libidl.so
-lib/libnetmgr.so
-lib/libqcci_adc.so
-lib/libqcci_legacy.so
-lib/libqdi.so
-lib/libqdp.so
-lib/libqmi.so
-lib/libqmi_client_qmux.so
-lib/libqmi_csvt_srvc.so
-lib/libqmiservices.so
-lib/libril.so
-lib/librilutils.so
-lib/libril-qc-qmi-1.so
-lib/libril-qcril-hook-oem.so
-#bin/ds_fmc_appd
-#bin/mdm_helper
+#RIL
+bin/irsc_util
 bin/netmgrd
 bin/qmuxd
-bin/rild
+bin/radish
+bin/rfs_access
 bin/rmt_storage
-#bin/modemservice
+app/qcrilmsgtunnel/qcrilmsgtunnel.apk
+app/shutdownlistener/shutdownlistener.apk
+etc/permissions/qcnvitems.xml
+etc/permissions/qcrilhook.xml
+framework/qcnvitems.jar
+framework/qcrilhook.jar
+lib/libcnefeatureconfig.so
+lib/libmdmdetect.so
+vendor/lib/libconfigdb.so
+vendor/lib/libcneapiclient.so
+vendor/lib/libcneconn.so
+vendor/lib/libcneqmiutils.so
+vendor/lib/libcneutils.so
 vendor/lib/libdiag.so
+vendor/lib/libdsi_netctrl.so
+vendor/lib/libdsutils.so
+vendor/lib/libril-qc-qmi-1.so
+vendor/lib/libril-qcril-hook-oem.so
+vendor/lib/libidl.so
+vendor/lib/libnetmgr.so
+vendor/lib/libperipheral_client.so
+vendor/lib/libqcci_legacy.so
+vendor/lib/libqdi.so
+vendor/lib/libqdp.so
+vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
+vendor/lib/libqmi_client_qmux.so
 vendor/lib/libqmi_common_so.so
 vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
-#vendor/lib/libril-qc-qmi-1.so
-
-# STOCK RIL/RADIO
-#lib/libril.so
-#lib/librilutils.so
-#vendor/lib/libnetmgr.so
-#vendor/lib/libidl.so
-#vendor/lib/libdiag.so
-#vendor/lib/libdsi_netctrl.so
-#vendor/lib/libds_jni.so
-#vendor/lib/libds_native.so
-#vendor/lib/libdsnetutils.so
-#vendor/lib/libdsucsd.so
-#vendor/lib/libdsutils.so
-#vendor/lib/libqcci_legacy.so
-#vendor/lib/libqdi.so
-#vendor/lib/libqdp.so
-#vendor/lib/libqmi.so
-#vendor/lib/libqmi_cci.so
-#vendor/lib/libqmi_client_qmux.so
-#vendor/lib/libqmi_common_so.so
-#vendor/lib/libqmi_csi.so
-#vendor/lib/libqmi_csvt_srvc.so
-#vendor/lib/libqmi_encdec.so
-#vendor/lib/libqmiservices.so
-#vendor/lib/libril-qc-qmi-1.so
-#vendor/lib/libril-qcril-hook-oem.so
-#bin/ds_fmc_appd
-#bin/mdm_helper
-#bin/netmgrd
-#bin/qmuxd
-#bin/rild
-#bin/rmt_storage
-#bin/modemservice
-
+vendor/lib/libqmiservices.so
+vendor/lib/libsmemlog.so
+vendor/lib/libsystem_health_mon.so
+vendor/lib/libxml.so
 
 # IPC router security
 etc/sec_config
-bin/irsc_util
-
 
 #WiFi
 etc/firmware/wlan/prima/WCNSS_cfg.dat
@@ -273,16 +231,11 @@ etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 etc/firmware/wlan/prima/WCNSS_qcom_wlan_factory_nv.bin
 
 # Bluetooth
-bin/init.btprop.sh
 bin/hci_qcomm_init
-bin/bt_ssp_debug_mode.sh
-bin/bt_testmode.sh
-bin/bt_testmode_new.sh
 bin/btnvtool
 vendor/lib/libbtnv.so
 
 # GPS
-
 #app/com.qualcomm.location.apk
 #app/com.qualcomm.services.location.apk
 bin/gpsone_daemon
@@ -291,9 +244,17 @@ bin/location-mq
 bin/lowi-server
 bin/quipc_igsn
 bin/quipc_main
-#bin/xtwifi-client
-#bin/xtwifi-inet-agent
+bin/xtwifi-client
+bin/xtwifi-inet-agent
 etc/permissions/com.qualcomm.location.xml
+etc/flp.conf
+etc/gps.conf
+etc/izat.conf
+etc/lowi.conf
+etc/msap.conf
+etc/quipc.conf
+etc/sap.conf
+etc/xtwifi.conf
 lib/libgps.utils.so
 lib/libloc_api_v02.so
 lib/libloc_core.so
@@ -302,6 +263,7 @@ lib/libloc_eng.so
 lib/libloc_xtra.so
 lib/hw/gps.default.so
 vendor/lib/hw/flp.default.so
+vendor/lib/libalarmservice_jni.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so
@@ -317,10 +279,6 @@ vendor/lib/libxtwifi_ulp_adaptor.so
 vendor/lib/libxtwifi_zpp_adaptor.so
 
 
-# FM
-etc/init.qcom.fm.sh
-bin/fm_qsoc_patches
-
 # Time services
 bin/time_daemon
 vendor/lib/libtime_genoff.so
@@ -329,61 +287,51 @@ vendor/lib/libTimeService.so
 
 # Sensors
 bin/sensors.qcom
-#lib/hw/sensors.default.so
 vendor/lib/hw/sensors.msm8226.so
 vendor/lib/libsensor1.so
 vendor/lib/libsensor_reg.so
-#vendor/lib/libsensor_test.so
-#vendor/lib/libsensor_thresh.so
-#vendor/lib/libsensor_user_cal.so
-#lib/libmodemapi.so
 
-# Lights (for now)
+# Lights
 lib/hw/lights.msm8226.so
 
 # Perf
+bin/mpdecision
 vendor/lib/libqc-opt.so
 
 # Thermal
-bin/mpdecision
 bin/thermal-engine
 etc/thermal-engine-8226.conf
 vendor/lib/libthermalclient.so
 vendor/lib/libthermalioctl.so
 
-# GPU/Adreno
-lib/egl/egl.cfg
+# GPU
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libadreno_utils.so
-vendor/lib/libc2d2_z180.so
-vendor/lib/libc2d30.so
+vendor/lib/libbccQTI.so
 vendor/lib/libc2d30-a3xx.so
-vendor/lib/libc2d30-a4xx.so
 vendor/lib/libC2D2.so
+vendor/lib/libCB.so
 vendor/lib/libgsl.so
+vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
-vendor/lib/libOpenVG.so
-vendor/lib/libsc-a2xx.so
+vendor/lib/librs_adreno.so
+vendor/lib/librs_adreno_sha1.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
+vendor/lib/libscale.so
+vendor/lib/libuiblur.so
 
-
-# Firmware
-etc/firmware/a225p5_pm4.fw
-etc/firmware/a225_pfp.fw
-etc/firmware/a225_pm4.fw
+# GPU Firmware
 etc/firmware/a300_pfp.fw
 etc/firmware/a300_pm4.fw
 etc/firmware/a330_pm4.fw
 etc/firmware/a330_pfp.fw
-etc/firmware/leia_pfp_470.fw
-etc/firmware/leia_pm4_470.fw
-etc/firmware/cpp_firmware_v1_1_1.fw
-etc/firmware/cpp_firmware_v1_1_6.fw
-etc/firmware/cpp_firmware_v1_2_0.fw
+
+# Venus firmware
 etc/firmware/venus.b00
 etc/firmware/venus.b01
 etc/firmware/venus.b02
@@ -391,29 +339,19 @@ etc/firmware/venus.b03
 etc/firmware/venus.b04
 etc/firmware/venus.mbn
 etc/firmware/venus.mdt
-#etc/firmware/ZTE_P897U11_P892S06_Success_PR1593801-S3203_DS3.6.0_35333037.img
 
-# NFC
-#etc/nfcee_access.xml
-#vendor/firmware/libpn544_fw.so
+# WideVine
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/libWVStreamControlAPI_L1.so
+vendor/lib/drm/libdrmwvmplugin.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
-# Other
-bin/charger_monitor.sh
-#bin/qmiproxy
-bin/rfs_access
-bin/qcom-system-daemon
-bin/bridgemgrd
-bin/cnd
+# PPD
 bin/mm-pp-daemon
-bin/port-bridge
-#bin/qcks
-#bin/qosmgr
-#bin/quipc_igsn
-#bin/quipc_main
-bin/sapd
-bin/usbhub_init
-#bin/usf_epos
-#bin/usf_tester
-#bin/ztecfg
-#bin/zte_charger
-#bin/ztediag
+vendor/lib/libmm-abl.so
+vendor/lib/libmm-abl-oem.so
+lib/libnl_2.so
+vendor/lib/libdisp-aba.so
+vendor/lib/libsubsystem_control.so
+

@@ -3,12 +3,12 @@
     "remote":    "github",
     "repository": "Bcrichster/android_kernel_zte_msm8226",
     "target_path": "kernel/warp4",
-    "revision":      "n"
+    "revision":      "m"
   },
   {
     "remote":     "github",
     "repository": "Bcrichster/vendor_zte_warp4",
     "target_path": "vendor/zte/warp4",
-    "revision":      "lineage-7.1"
+    "revision":      "6.0"
   }
 ]

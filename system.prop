@@ -1,13 +1,4 @@
-#
-# from device/zte/warp4/system.prop
-#
-#
-# system.prop for msm8226
-#
-
 # Use reference RIL for initial bringup
-#rild.libpath=/system/lib/libreference-ril.so
-#rild.libpath=/system/lib/libril-qc-qmi-1.so
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
@@ -22,10 +13,6 @@ persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
 persist.radio.msgtunnel.start=false
-# Start in cdma mode
-#zhaobin delete
-#ro.telephony.default_network=5
-#ro.telephony.ril_class=m8sprRIL
 
 ro.cdma.home.operator.alpha=Boost Mobile
 ro.cdma.home.operator.subscriber=31000
@@ -72,11 +59,10 @@ media.stagefright.enable-aac=true
 media.stagefright.enable-qcp=true
 media.stagefright.enable-fma2dp=true
 media.stagefright.enable-scan=true
+media.stagefright.legacyencoder=true
+media.stagefright.less-secure=true
 mmp.enable.3g2=true
 mm.enable.smoothstreaming=true
-#9273 is decimal sum of supported codecs in AAL
-#codecs:(PARSER_)AVI AC3 ASF AAC QCP DTS 3G2 MP2TS
-#mm.enable.qcom_parser=37491
 
 # VIDC: debug_levels
 # 1:ERROR 2:HIGH 4:LOW 0:NOlogs 7:AllLogs
@@ -106,11 +92,7 @@ telephony.slteOnCdmaDevice=1
 #
 persist.fuse_sdcard=true
 
-# Enable/disable cabl
-#ro.qualcomm.cabl=1
 ro.sf.lcd_density=320
-# system prop for NFC DT
-ro.nfc.port=I2C
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
@@ -122,6 +104,7 @@ persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
 use.voice.path.for.pcm.voip=true
+audio.offload.disable=1
 audio.offload.24bit.enable=false
 audio.offload.buffer.size.kb=32
 audio.offload.gapless.enabled=true
@@ -141,10 +124,6 @@ tunnel.audio.encode=false
 ##########################################
 #modify bug and continue snapshot by yichangming 201400605
 persist.camera.tintless=enable
-
-#persist.camera.zsl.interval=7
-#persist.camera.zsl.backlookcnt=1
-#persist.camera.zsl.queuedepth=1
 ###########################################
 
 persist.radio.en_wifi_lte=true
@@ -163,3 +142,18 @@ ro.qc.sdk.izat.service_mask=0x1
 persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.services.location
 ro.gps.agps_provider=10
+
+# Bluetooth
+qcom.bluetooth.soc=smd
+qcom.bt.le_dev_pwr_class=1
+ro.qualcomm.bluetooth.opp=true
+ro.qualcomm.bluetooth.hfp=true
+ro.qualcomm.bluetooth.hsp=true
+ro.qualcomm.bluetooth.pbap=true
+ro.qualcomm.bluetooth.ftp=true
+ro.qualcomm.bluetooth.nap=true
+ro.qualcomm.bluetooth.map=true
+ro.bluetooth.sap=true
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.6
+ro.qualcomm.bt.hci_transport=smd

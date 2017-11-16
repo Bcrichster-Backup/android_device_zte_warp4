@@ -27,5 +27,6 @@
 #define BTA_BLE_SKIP_CONN_UPD TRUE
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT TRUE
+#define KERNEL_MISSING_CLOCK_BOOTTIME_ALARM TRUE
 
 #endif
