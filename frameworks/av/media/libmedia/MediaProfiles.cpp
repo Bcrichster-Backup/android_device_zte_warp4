@@ -1,6 +1,4 @@
 /*
-** Copyright (c) 2014, The Linux Foundation. All rights reserved.
-** Not a Contribution.
 **
 ** Copyright 2010, The Android Open Source Project
 **
@@ -25,7 +23,7 @@
 #include <utils/Log.h>
 #include <utils/Vector.h>
 #include <cutils/properties.h>
-#include <libexpat/expat.h>
+#include <expat.h>
 #include <media/MediaProfiles.h>
 #include <media/stagefright/foundation/ADebug.h>
 #include <OMX_Video.h>
@@ -40,7 +38,7 @@ const MediaProfiles::NameToTagMap MediaProfiles::sVideoEncoderNameMap[] = {
     {"h263", VIDEO_ENCODER_H263},
     {"h264", VIDEO_ENCODER_H264},
     {"m4v",  VIDEO_ENCODER_MPEG_4_SP},
-    {"h265", VIDEO_ENCODER_H265}
+    {"hevc", VIDEO_ENCODER_HEVC}
 };
 
 const MediaProfiles::NameToTagMap MediaProfiles::sAudioEncoderNameMap[] = {
@@ -116,7 +114,7 @@ const MediaProfiles::NameToTagMap MediaProfiles::sCamcorderQualityNameMap[] = {
     {"2k", CAMCORDER_QUALITY_2k},
     {"timelapseqhd", CAMCORDER_QUALITY_TIME_LAPSE_QHD},
     {"timelapse2k", CAMCORDER_QUALITY_TIME_LAPSE_2k},
-
+ 
     {"hevc720p", CAMCORDER_QUALITY_HEVC720P},
     {"hevc1080p", CAMCORDER_QUALITY_HEVC1080P},
     {"hevc4kuhd",CAMCORDER_QUALITY_HEVC4kUHD},
@@ -307,7 +305,7 @@ MediaProfiles::createVideoEncoderCap(const char **atts)
         maxHFRHeight = atoi(atts[23]);
         maxHFRMode = atoi(atts[25]);
     }
-
+ 
     MediaProfiles::VideoEncoderCap *cap =
         new MediaProfiles::VideoEncoderCap(static_cast<video_encoder>(codec),
             atoi(atts[5]), atoi(atts[7]), atoi(atts[9]), atoi(atts[11]), atoi(atts[13]),
@@ -1130,22 +1128,18 @@ MediaProfiles::~MediaProfiles()
         delete mAudioEncoders[i];
     }
     mAudioEncoders.clear();
-
     for (size_t i = 0; i < mVideoEncoders.size(); ++i) {
         delete mVideoEncoders[i];
     }
     mVideoEncoders.clear();
-
     for (size_t i = 0; i < mVideoDecoders.size(); ++i) {
         delete mVideoDecoders[i];
     }
     mVideoDecoders.clear();
-
     for (size_t i = 0; i < mAudioDecoders.size(); ++i) {
         delete mAudioDecoders[i];
     }
     mAudioDecoders.clear();
-
     for (size_t i = 0; i < mCamcorderProfiles.size(); ++i) {
         delete mCamcorderProfiles[i];
     }
