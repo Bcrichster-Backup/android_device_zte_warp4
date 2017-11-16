@@ -1,6 +1,4 @@
 /*
- ** Copyright (c) 2014, The Linux Foundation. All rights reserved.
- ** Not a Contribution.
  **
  ** Copyright 2010, The Android Open Source Project.
  **
@@ -62,7 +60,7 @@ enum camcorder_quality {
     CAMCORDER_QUALITY_TIME_LAPSE_FWVGA = 1012,
     CAMCORDER_QUALITY_TIME_LAPSE_4kDCI = 1013,
     CAMCORDER_QUALITY_TIME_LAPSE_LIST_END = 1013,
-
+ 
     CAMCORDER_QUALITY_HIGH_SPEED_LIST_START = 2000,
     CAMCORDER_QUALITY_HIGH_SPEED_LOW  = 2000,
     CAMCORDER_QUALITY_HIGH_SPEED_HIGH = 2001,
@@ -306,7 +304,7 @@ private:
               mMinFrameRate(minFrameRate), mMaxFrameRate(maxFrameRate),
               mMaxHFRFrameWidth(maxHFRFrameWidth), mMaxHFRFrameHeight(maxHFRFrameHeight),
               mMaxHFRMode(maxHFRMode) {}
-
+ 
          ~VideoEncoderCap() {}
 
         video_encoder mCodec;
