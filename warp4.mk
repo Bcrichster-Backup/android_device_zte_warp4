@@ -9,11 +9,11 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 PRODUCT_LOCALES += xhdpi
 
 # adb + root
-ADDITIONAL_DEFAULT_PROPERTIES += \
-	ro.secure=0 \
-	ro.allow.mock.location=0 \
-	ro.adb.secure=0 \
-	ro.debuggable=1
+#ADDITIONAL_DEFAULT_PROPERTIES += \
+#	ro.secure=0 \
+#	ro.allow.mock.location=0 \
+#	ro.adb.secure=0 \
+#	ro.debuggable=1
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
@@ -82,6 +82,30 @@ PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	libaudio-resampler
 
+# Add Media Tones
+PROJECT_COPY_FILES := \
+$(LOCAL_PATH)/media/alarms/Alarm_Beep_01.ogg:system/media/alarms/Alarm_Beep_01.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Beep_02.ogg:system/media/alarms/Alarm_Beep_02.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Beep_03.ogg:system/media/alarms/Alarm_Beep_03.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Buzzer.ogg:system/media/alarms/Alarm_Buzzer.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Classic.ogg:system/media/alarms/Alarm_Classic.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Rooster_01.ogg:system/media/alarms/Alarm_Rooster_01.ogg \
+$(LOCAL_PATH)/media/alarms/Alarm_Rooster_02.ogg:system/media/alarms/Alarm_Rooster_02.ogg \
+$(LOCAL_PATH)/media/notifications/CaffeineSnake.ogg:system/media/notifications/CaffeineSnake.ogg \
+$(LOCAL_PATH)/media/notifications/Cobalt.ogg:system/media/notifications/Cobalt.ogg \
+$(LOCAL_PATH)/media/notifications/CurveBall.ogg:system/media/notifications/CurveBall.ogg \
+$(LOCAL_PATH)/media/notifications/CyanDoink.ogg:system/media/notifications/CyanDoink.ogg \
+$(LOCAL_PATH)/media/notifications/CyanMail.ogg:system/media/notifications/CyanMail.ogg \
+$(LOCAL_PATH)/media/notifications/CyanMessage.ogg:system/media/notifications/CyanMessage.ogg \
+$(LOCAL_PATH)/media/ringtones.BeatPlucker.ogg:system/media/ringtones/BeatPlucker.ogg \
+$(LOCAL_PATH)/media/ringtones.BentleyDubs.ogg:system/media/ringtones/BentlyDubs.ogg \
+$(LOCAL_PATH)/media/ringtones.CyanTone.ogg:system/media/ringtones/CyanTone.ogg \
+$(LOCAL_PATH)/media/ringtones.GameOverGuitar.ogg:system/media/ringtones/GameOverGuitar.ogg \
+$(LOCAL_PATH)/media/ringtones.SitarVsSitar.ogg:system/media/ringtones/SitarVsSitar.ogg
+
+
+## APPS ##
+
 # DSPManager
 PRODUCT_PACKAGES += \
     DSPManager \
@@ -104,9 +128,17 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NovaLauncher \
 
+# ParanoidPapers
+PRODUCT_PACKAGES += \
+    ParanoidPapers \
+
 # Pyrope
 PRODUCT_PACKAGES += \
     Pyrope \
+
+# Voicemail
+PRODUCT_PACKAGES += \
+    Voicemail \
 
 # ViPER4Android
 PRODUCT_PACKAGES += \
