@@ -1,5 +1,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product-if-exists, vendor/zte/warp4/warp4-vendor.mk)
+#$(call inherit-product-if-exists, vendor/arise/Android.mk.mk)#
+#$(call inherit-product-if-exists, vendor/arise/vendor.mk)#
 
 DEVICE_PACKAGE_OVERLAYS += device/zte/warp4/overlay
 
@@ -76,7 +78,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	alsa.msm8226 \
 	audio.a2dp.default \
-        audio_policy.msm8226 \
+    audio_policy.msm8226 \
 	audio.primary.msm8226 \
 	audio.usb.default \
 	audio.r_submix.default \
@@ -88,30 +90,29 @@ PRODUCT_PACKAGES += \
     audio_effects.conf \
     libcyanogen-dsp
 
-# Gello
+# CMwallpapers
 PRODUCT_PACKAGES += \
-    Gello \
-
-# Jelly
-PRODUCT_PACKAGES += \
-    Jelly \
-
-# KernelAdiutor
-PRODUCT_PACKAGES += \
-    KernelAdiutor \
+    CMWallpapers \
 
 # NovaLauncher
 PRODUCT_PACKAGES += \
     NovaLauncher \
 
-# Pyrope
+# ParanoidPapers
 PRODUCT_PACKAGES += \
-    Pyrope \
+    ParanoidPapers \
+
+# Terminal
+PRODUCT_PACKAGES += \
+    Terminal \
 
 # ViPER4Android
 PRODUCT_PACKAGES += \
     ViPER4Android \
 
+# ViPER4Arise
+#PRODUCT_PACKAGES += \
+#    ViPER4Arise \
 
 # Omx
 PRODUCT_PACKAGES += \
@@ -138,10 +139,6 @@ PRODUCT_PACKAGES += \
     make_ext4fs \
     e2fsck \
     setup_fs
-
-# CMFileManager
-PRODUCT_PACKAGES += \
-    CMFileManager \
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -202,3 +199,10 @@ $(call inherit-product-if-exists, vendor/zte/warp4/warp4-vendor.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=8
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	DEVICE_MAINTAINERS="bcrichster"
+
+# Use SuperUser
+USE_SU := true
+WITH_ROOT := true
